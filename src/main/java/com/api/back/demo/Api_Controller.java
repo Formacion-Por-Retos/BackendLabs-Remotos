@@ -9,7 +9,7 @@ public class Api_Controller {
     @Autowired
     private Api_Test_Repository apiTest_repository;
 
-    @PostMapping("/question/add")
+    @PostMapping("/add")
     public String addQuestion(@RequestParam String dato) {
           apiTest_repository.save(new Api_Test(dato));
           return "se agrego informacion";
