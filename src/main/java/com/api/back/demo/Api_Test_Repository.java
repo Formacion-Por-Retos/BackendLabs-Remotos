@@ -7,8 +7,4 @@ import java.util.List;
 
 @Repository
 public interface Api_Test_Repository extends JpaRepository<Api_Test, Integer> {
-    Api_Test findByTitle(String title);
-    List<Api_Test> findAllByActive(boolean activate);
-    boolean existsByTitle(String title);
-    boolean existsByTitleAndActive(String title, boolean active);
 }
