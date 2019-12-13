@@ -10,9 +10,8 @@ public class Api_Test {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "Title", nullable = false, unique = true)
+    @Column(name = "Title")
     private String title;
-
 
     public Api_Test(){
     }
