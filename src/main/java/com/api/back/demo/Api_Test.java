@@ -19,6 +19,11 @@ public class Api_Test {
     @Column(name = "Dato")
     private String dato;
 
+
+    @Column(name = "Dato2")
+    private String dato2;
+
+
     @Column(name = "Horadecreacion")
     private String creado;
 
@@ -26,9 +31,18 @@ public class Api_Test {
     public Api_Test(){
     }
 
-    public Api_Test(String title, String creado){
+    public Api_Test(String title, String creado, String dato2){
         setTitle(title);
         setCreado(creado);
+        setDato2(dato2);
+    }
+
+    public String getDato2() {
+        return dato2;
+    }
+
+    public void setDato2(String dato2) {
+        this.dato2 = dato2;
     }
 
     public String getCreado() {

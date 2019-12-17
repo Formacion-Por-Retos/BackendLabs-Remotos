@@ -13,12 +13,12 @@ public class Api_Controller {
     private Api_Test_Repository apiTest_repository;
 
     @PostMapping("/add")
-    public String addQuestion(@RequestParam String dato) {
+    public String addQuestion(@RequestParam String dato, @RequestParam String dato2) {
 
         Date date= new Date();
         long time = date.getTime();
         Timestamp ts = new Timestamp(time);
-        apiTest_repository.save(new Api_Test(dato,ts.toString()));
+        apiTest_repository.save(new Api_Test(dato,dato2,ts.toString()));
           return "Se agrego información";
     }
 }
