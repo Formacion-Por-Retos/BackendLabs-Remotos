@@ -18,7 +18,7 @@ public class Api_Controller {
         Date date= new Date();
         long time = date.getTime();
         Timestamp ts = new Timestamp(time);
-        apiTest_repository.save(new Api_Test(dato,dato2,ts.toString()));
-          return "Se agrego información";
+        apiTest_repository.save(new Api_Test(dato,dato2,    ts.toString()));
+          return "Se agrego. -Paul9834";
     }
 }
