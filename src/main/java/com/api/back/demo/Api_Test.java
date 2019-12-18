@@ -1,12 +1,6 @@
 package com.api.back.demo;
-
-import org.hibernate.annotations.CreationTimestamp;
-
 import javax.persistence.*;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
-import java.util.Date;
+
 
 @Entity
 @Table(name = "Datos")
@@ -31,10 +25,12 @@ public class Api_Test {
     public Api_Test(){
     }
 
-    public Api_Test(String title, String creado, String dato2){
-        setTitle(title);
-        setCreado(creado);
+    public Api_Test(String dato, String dato2 , String creado){
+
+        setTitle(dato);
         setDato2(dato2);
+        setCreado(creado);
+
     }
 
     public String getDato2() {
