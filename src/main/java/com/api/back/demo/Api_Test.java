@@ -31,12 +31,10 @@ public class Api_Test {
     public Api_Test(){
     }
 
-    public Api_Test(String dato, String dato2, String dato3, String dato4, String creado){
+    public Api_Test(String dato, String dato2,String creado){
 
         setTitle(dato);
         setDato2(dato2);
-        setDato3(dato3);
-        setDato4(dato4);
         setCreado(creado);
 
     }
