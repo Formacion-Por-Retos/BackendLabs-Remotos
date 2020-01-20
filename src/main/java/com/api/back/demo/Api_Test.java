@@ -31,7 +31,7 @@ public class Api_Test {
     public Api_Test(){
     }
 
-    public Api_Test(String dato, String dato2,String creado){
+    public Api_Test(String dato, String creado){
 
         setTitle(dato);
         setDato2(dato2);

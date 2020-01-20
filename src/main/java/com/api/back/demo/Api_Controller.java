@@ -15,13 +15,13 @@ public class Api_Controller {
     private Api_Test_Repository apiTest_repository;
 
     @PostMapping("/add")
-    public String addQuestion(@RequestParam String dato, @RequestParam String dato2) {
+    public String addQuestion(@RequestParam String dato) {
 
         ZoneId zone = ZoneId.of("America/Bogota");
         ZonedDateTime date = ZonedDateTime.now(zone);
         String fecha = date.toString();
 
-        apiTest_repository.save(new Api_Test(dato,dato2,fecha));
+        apiTest_repository.save(new Api_Test(dato,fecha));
           return "Se agrego. -Paul9834";
     }
 }
