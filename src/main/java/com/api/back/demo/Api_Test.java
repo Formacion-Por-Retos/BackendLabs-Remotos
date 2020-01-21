@@ -38,7 +38,6 @@ public class Api_Test {
         setDato3(dato3);
         setDato4(dato4);
         setCreado(creado);
-
     }
 
     public String getDato3() {
