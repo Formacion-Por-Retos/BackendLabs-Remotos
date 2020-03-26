@@ -42,7 +42,7 @@ public class Estados_Controller {
     @PostMapping("/boton2")
     public String Boton2(@RequestParam Boolean dato2) {
         Estados test = apiTest_repository.findById(1);
-        test.setDato1(dato2);
+        test.setDato2(dato2);
         apiTest_repository.save(test);
         return "Se actualizo el estado del bombillo #2";
     }
@@ -50,7 +50,7 @@ public class Estados_Controller {
     @PostMapping("/boton3")
     public String Boton3(@RequestParam Boolean dato3) {
         Estados test = apiTest_repository.findById(1);
-        test.setDato1(dato3);
+        test.setDato3(dato3);
         apiTest_repository.save(test);
         return "Se actualizo el estado del bombillo #3";
     }
