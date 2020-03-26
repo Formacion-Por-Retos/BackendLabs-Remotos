@@ -30,15 +30,30 @@ public class Estados_Controller {
         apiTest_repository.save(test);
         return "Se actualizo el estado";
     }
-    
+
     @PostMapping("/boton1")
     public String Boton1(@RequestParam Boolean dato1) {
         Estados test = apiTest_repository.findById(1);
         test.setDato1(dato1);
         apiTest_repository.save(test);
-        return "Se actualizo el estado";
+        return "Se actualizo el estado del bombillo #1";
     }
 
+    @PostMapping("/boton2")
+    public String Boton2(@RequestParam Boolean dato2) {
+        Estados test = apiTest_repository.findById(1);
+        test.setDato1(dato2);
+        apiTest_repository.save(test);
+        return "Se actualizo el estado del bombillo #2";
+    }
+
+    @PostMapping("/boton3")
+    public String Boton3(@RequestParam Boolean dato3) {
+        Estados test = apiTest_repository.findById(1);
+        test.setDato1(dato3);
+        apiTest_repository.save(test);
+        return "Se actualizo el estado del bombillo #3";
+    }
 
 
 
