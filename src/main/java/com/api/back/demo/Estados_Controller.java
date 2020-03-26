@@ -22,6 +22,7 @@ public class Estados_Controller {
 
     @PostMapping("/state")
     public String modificarStatus(@RequestParam Boolean dato1, @RequestParam Boolean dato2, @RequestParam Boolean dato3) {
+
         Estados test = apiTest_repository.findById(1);
         test.setDato1(dato1);
         test.setDato2(dato2);
@@ -29,10 +30,25 @@ public class Estados_Controller {
         apiTest_repository.save(test);
         return "Se actualizo el estado";
     }
+    
+    @PostMapping("/boton1")
+    public String Boton1(@RequestParam Boolean dato1) {
+        Estados test = apiTest_repository.findById(1);
+        test.setDato1(dato1);
+        apiTest_repository.save(test);
+        return "Se actualizo el estado";
+    }
+
+
+
+
 
     @GetMapping ("/get")
     public Estados getFriendsPublication () {
         return apiTest_repository.findById(1);
     }
+
+
+
 }
 
