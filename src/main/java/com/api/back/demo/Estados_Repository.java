@@ -5,7 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface Estados_Repository extends JpaRepository<Estados, Integer> {
-
   Estados findById(int id);
-
 }
