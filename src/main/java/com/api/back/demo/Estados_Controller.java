@@ -10,14 +10,14 @@ public class Estados_Controller {
     private Estados_Repository apiTest_repository;
 
     @PostMapping("/add")
-    public String addQuestion(@RequestParam Boolean dato1, @RequestParam Boolean dato2, @RequestParam Boolean dato3) {
+    public String addQuestion(@RequestParam boolean dato1, @RequestParam boolean dato2, @RequestParam boolean dato3) {
         apiTest_repository.save(new Estados(dato1,dato2,dato3));
           return "Se agrego. -Paul9834";
 
     }
 
     @PostMapping("/state")
-    public String modificarStatus(@RequestParam Boolean dato1, @RequestParam Boolean dato2, @RequestParam Boolean dato3) {
+    public String modificarStatus(@RequestParam boolean dato1, @RequestParam boolean dato2, @RequestParam boolean dato3) {
         Estados test = apiTest_repository.findById(1);
         test.setDato1(dato1);
         test.setDato2(dato2);
@@ -27,7 +27,7 @@ public class Estados_Controller {
     }
 
     @PostMapping("/boton1")
-    public String Boton1(@RequestParam Boolean dato1) {
+    public String Boton1(@RequestParam boolean dato1) {
         Estados test = apiTest_repository.findById(1);
         test.setDato1(dato1);
         apiTest_repository.save(test);
@@ -35,7 +35,7 @@ public class Estados_Controller {
     }
 
     @PostMapping("/boton2")
-    public String Boton2(@RequestParam Boolean dato2) {
+    public String Boton2(@RequestParam boolean dato2) {
         Estados test = apiTest_repository.findById(1);
         test.setDato2(dato2);
         apiTest_repository.save(test);
@@ -43,7 +43,7 @@ public class Estados_Controller {
     }
 
     @PostMapping("/boton3")
-    public String Boton3(@RequestParam Boolean dato3) {
+    public String Boton3(@RequestParam boolean dato3) {
         Estados test = apiTest_repository.findById(1);
         test.setDato3(dato3);
         apiTest_repository.save(test);
