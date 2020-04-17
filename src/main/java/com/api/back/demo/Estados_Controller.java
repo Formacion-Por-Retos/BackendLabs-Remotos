@@ -9,11 +9,13 @@ public class Estados_Controller {
     @Autowired
     private Estados_Repository apiTest_repository;
 
+    @Autowired
+    private Elementos_Repository elementos_repository;
+
     @PostMapping("/add")
     public String addQuestion(@RequestParam boolean dato1, @RequestParam boolean dato2, @RequestParam boolean dato3) {
         apiTest_repository.save(new Estados(dato1,dato2,dato3));
           return "Se agrego. -Paul9834";
-
     }
 
     @PostMapping("/state")
@@ -55,5 +57,22 @@ public class Estados_Controller {
     public Estados getFriendsPublication () {
         return apiTest_repository.findById(1);
     }
+
+    @PostMapping("/addElemento")
+    public String addElement(@RequestParam String elemento) {
+
+        Elementos test = elementos_repository.findById(1);
+        test.setAlcohol(elemento);
+        elementos_repository.save(test);
+        return "Se agrego. -Paul9834";
+
+    }
+
+    @GetMapping ("/getString")
+    public Elementos getElementosPublication () {
+        return elementos_repository.findById(1);
+    }
+
+
 }
 
