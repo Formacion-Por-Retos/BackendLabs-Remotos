@@ -17,17 +17,20 @@ public class Elementos {
     @Column(name = "statushardware")
     private Boolean statushardware;
 
+    @Column (name = "delay")
+    private Integer delay;
+
 
     public Elementos () {
 
     }
 
-    public Elementos(int id, String message, Boolean statushardware) {
-
+    public Elementos(int id, String message, Boolean statushardware, Integer delay) {
         setMessage(message);
         setStatushardware(statushardware);
-
+        setDelay(delay);
     }
+
 
     public int getId() {
         return id;
@@ -51,5 +54,13 @@ public class Elementos {
 
     public void setStatushardware(Boolean statushardware) {
         this.statushardware = statushardware;
+    }
+
+    public Integer getDelay() {
+        return delay;
+    }
+
+    public void setDelay(Integer delay) {
+        this.delay = delay;
     }
 }

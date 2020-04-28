@@ -69,7 +69,6 @@ public class Estados_Controller {
 
     }
 
-
     @PostMapping("/updatehardware")
     public String  updateHardware(@RequestParam Boolean statushardware) {
         Elementos test = elementos_repository.findById(1);
@@ -81,6 +80,20 @@ public class Estados_Controller {
       else {
           return false + "Error";
       }
+    }
+
+
+    @PostMapping("/delay")
+    public String  updateDelay(@RequestParam Integer delay) {
+        Elementos test = elementos_repository.findById(1);
+        if (test != null) {
+            test.setDelay(delay);
+            elementos_repository.save(test);
+            return  "Se actualizo el delay del hardware a " + test.getDelay();
+        }
+        else {
+            return false + "Error";
+        }
     }
 
 
