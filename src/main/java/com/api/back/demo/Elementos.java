@@ -14,21 +14,20 @@ public class Elementos {
     @Column(name = "message")
     private String message;
 
-    @Column(name = "status_hardware")
-    private Boolean status_hardware;
+    @Column(name = "statushardware")
+    private Boolean statushardware;
 
 
     public Elementos () {
 
     }
 
-    public Elementos(int id, String message, Boolean status_hardware) {
+    public Elementos(int id, String message, Boolean statushardware) {
 
         setMessage(message);
-        setStatus_hardware(status_hardware);
+        setStatushardware(statushardware);
 
     }
-
 
     public int getId() {
         return id;
@@ -46,11 +45,11 @@ public class Elementos {
         this.message = message;
     }
 
-    public Boolean getStatus_hardware() {
-        return status_hardware;
+    public Boolean getStatushardware() {
+        return statushardware;
     }
 
-    public void setStatus_hardware(Boolean status_hardware) {
-        this.status_hardware = status_hardware;
+    public void setStatushardware(Boolean statushardware) {
+        this.statushardware = statushardware;
     }
 }

@@ -71,12 +71,12 @@ public class Estados_Controller {
 
 
     @PostMapping("/updatehardware")
-    public String  updateHardware(@RequestParam Boolean status_hardware) {
+    public String  updateHardware(@RequestParam Boolean statushardware) {
         Elementos test = elementos_repository.findById(1);
       if (test != null) {
-          test.setStatus_hardware(status_hardware);
+          test.setStatushardware(statushardware);
           elementos_repository.save(test);
-          return  "Se actualizo el estado del hardware a " + test.getStatus_hardware();
+          return  "Se actualizo el estado del hardware a " + test.getStatushardware();
       }
       else {
           return false + "Error";
