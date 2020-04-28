@@ -59,14 +59,31 @@ public class Estados_Controller {
     }
 
     @PostMapping("/addElemento")
-    public String addElement(@RequestParam String elemento) {
+    public String addElement(@RequestParam String message) {
 
         Elementos test = elementos_repository.findById(1);
-        test.setAlcohol(elemento);
+        test.setMessage(message);
         elementos_repository.save(test);
-        return "Se agrego. -Paul9834";
+        return "Se actualizo el mensaje";
+
 
     }
+
+
+    @PostMapping("/updatehardware")
+    public String  updateHardware(@RequestParam Boolean status_hardware) {
+        Elementos test = elementos_repository.findById(1);
+      if (test != null) {
+          test.setStatus_hardware(status_hardware);
+          elementos_repository.save(test);
+          return  "Se actualizo el estado del hardware a " + test.getStatus_hardware();
+      }
+      else {
+          return false + "Error";
+      }
+    }
+
+
 
     @GetMapping ("/getString")
     public Elementos getElementosPublication () {
