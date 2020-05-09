@@ -104,5 +104,18 @@ public class Estados_Controller {
     }
 
 
+    
+    @GetMapping ("/test")
+    public Boolean test () {
+
+        Elementos test = elementos_repository.findById(1);
+
+        if (test == null) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 }
 
